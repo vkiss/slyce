@@ -1,0 +1,7 @@
+@each $name, $par in (top: flex-start, middle: center, bottom: flex-end) {
+  .#{$prefix}-valign-#{$name},
+  [class^="#{$prefix}-col"][class*="--va-#{$name}"],
+  [class*=" #{$prefix}-col"][class*="--va-#{$name}"] {
+    align-self: $par;
+  }
+}

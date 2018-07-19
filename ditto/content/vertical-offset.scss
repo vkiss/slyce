@@ -1,0 +1,26 @@
+@if $vertical-offset-helper {
+  @each $va in $vertical-offset-sizes {
+    .#{$prefix}- {
+      &mt-#{$va} {
+        margin-top: #{$va}px;
+      }
+      &mb-#{$va} {
+        margin-bottom: #{$va}px;
+      }
+      &pt-#{$va} {
+        padding-top: #{$va}px;
+      }
+      &pb-#{$va} {
+        padding-bottom: #{$va}px;
+      }
+      &vp-#{$va} {
+        padding-top: #{$va}px;
+        padding-bottom: #{$va}px;
+      }
+      &vm-#{$va} {
+        margin-top: #{$va}px;
+        margin-bottom: #{$va}px;
+      }
+    }
+  }
+}

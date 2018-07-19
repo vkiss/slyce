@@ -1,0 +1,20 @@
+.#{$prefix}-container {
+  width: auto;
+  max-width: $container-size;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: $gutter;
+  padding-right: $gutter;
+
+  @include mq(mobile) {
+    padding-left: $gutter;
+    padding-right: $gutter;
+  }
+
+  @include mq(desktop) {
+    padding-left: $gutter;
+    padding-right: $gutter;
+  }
+}

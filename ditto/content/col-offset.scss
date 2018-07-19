@@ -1,0 +1,29 @@
+@each $mq, $size in ('mobile': 's', 'tablet': 'm', 'desktop': 'l', 'ultra': 'xl') {
+  @include mq($mq) {
+    @for $col from 0 through ($noCol) {
+      @if $col > 0 {
+        .#{$prefix}-col-#{$size}-#{$col},
+        [class^="#{$prefix}-col"][class*="--#{$size}-#{$col}"],
+        [class*=" #{$prefix}-col"][class*="--#{$size}-#{$col}"] {
+          $exp: $col*100/$noCol;
+          flex: $exp + %;
+          max-width: $exp + %;
+        }
+
+        .#{$prefix}-offset-x-#{$size}-#{$col},
+        [class^="#{$prefix}-col"][class*="--of-#{$size}-#{$col}"],
+        [class*=" #{$prefix}-col"][class*="--of-#{$size}-#{$col}"] {
+          $exp: $col*100/$noCol;
+          margin-left: $exp + %;
+        }
+      }
+      @else {
+        .#{$prefix}-offset-x-#{$size}-#{$col},
+        [class^="#{$prefix}-col"][class*="--of-#{$size}-#{$col}"],
+        [class*=" #{$prefix}-col"][class*="--of-#{$size}-#{$col}"] {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}

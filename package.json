@@ -1,0 +1,35 @@
+{
+  "name": "ditto-grid-system",
+  "version": "1.0.0",
+  "description": "Customizable grid system that can be utilied in any project",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vkiss/ditto-grid-system.git"
+  },
+  "keywords": [
+    "grid",
+    "scss",
+    "css",
+    "sass"
+  ],
+  "author": "Vinicius Kiss <contato@vkiss.com.br>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vkiss/ditto-grid-system/issues"
+  },
+  "homepage": "https://github.com/vkiss/ditto-grid-system#readme",
+  "scripts": {
+    "sass": "node-sass --output-style nested --indent-type space --indent-width 2 -o build ditto/ditto.scss",
+    "autoprefixer": "postcss -u autoprefixer -r build/*",
+    "concat": "concat -o build/ditto.scss config.scss ditto/mixins.scss ditto/content/body-config.scss ditto/content/row.scss ditto/content/col.scss ditto/content/col-offset.scss ditto/content/vertical-align.scss ditto/content/vertical-offset.scss ditto/content/hide.scss",
+    "build": "rimraf build && npm run sass && npm run autoprefixer",
+    "build:scss": "rimraf build && mkdir build && npm run concat"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.0.0",
+    "concat": "^1.0.3",
+    "node-sass": "^4.9.2",
+    "postcss-cli": "^6.0.0",
+    "rimraf": "^2.6.2"
+  }
+}

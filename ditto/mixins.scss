@@ -1,0 +1,36 @@
+@mixin mq($device) {
+  @if $device == 'ultra' {
+    @media screen and (min-width: $bp-ultra) {
+      @content
+    }
+  };
+  @if $device == 'desktop' {
+    @media screen and (min-width: $bp-desktop) {
+      @content
+    }
+  };
+  @if $device == 'tablet' {
+    @media screen and (min-width: $bp-tablet) and (max-width: ($bp-desktop - 1)) {
+      @content
+    }
+  };
+  @if $device == 'mobile' {
+    @media screen and (max-width: ($bp-tablet - 1)) {
+      @content
+    }
+  };
+}
+
+@mixin dinamicClass($class) {
+  [class^="#{$class}"],
+  [class*=" #{$class}"] {
+    @content
+  };
+};
+
+@mixin dinamicMultiClass($class, $class2) {
+  [class^="#{$class}"][class*="#{$class2}"],
+  [class*=" #{$class}"][class*="#{$class2}"] {
+    @content
+  };
+};

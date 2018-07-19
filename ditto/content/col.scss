@@ -1,0 +1,50 @@
+@include dinamicClass('#{$prefix}-col') {
+  padding-left: ($gutter/2);
+  padding-right: ($gutter/2);
+  min-height: 1px;
+  position: relative;
+  flex-grow: 1;
+  flex-basis: 0;
+  box-sizing: border-box;
+
+  & > [class^="#{$prefix}-col"],
+  & > [class*=" #{$prefix}-col"] {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@for $col from 0 through ($noCol) {
+  @if $col > 0 {
+    .#{$prefix}-col-#{$col},
+    [class^="#{$prefix}-col-#{$col}"],
+    [class*=" #{$prefix}-col-#{$col}"] {
+      $exp: $col*100/$noCol;
+      flex: 0 0 $exp + %;
+      max-width: $exp + %;
+    }
+    .#{$prefix}-offset-x-#{$col},
+    [class^="#{$prefix}-col"][class*="--of-#{$col}"],
+    [class*=" #{$prefix}-col"][class*="--of-#{$col}"] {
+      $exp: $col*100/$noCol;
+      margin-left: $exp + %;
+    }
+
+    .#{$prefix}-order-#{$col},
+    [class^="#{$prefix}-col"][class*="--or-#{$col}"],
+    [class*=" #{$prefix}-col"][class*="--or-#{$col}"] {
+      order: $col;
+    }
+  } @else {
+    .#{$prefix}-order-#{$col},
+    [class^="#{$prefix}-col"][class*="--or-#{$col}"],
+    [class*=" #{$prefix}-col"][class*="--or-#{$col}"] {
+      order: $col;
+    }
+    .#{$prefix}-offset-x-#{$col},
+    [class^="#{$prefix}-col"][class*="--of-#{$col}"],
+    [class*=" #{$prefix}-col"][class*="--of-#{$col}"] {
+      margin-left: 0;
+    }
+  }
+}

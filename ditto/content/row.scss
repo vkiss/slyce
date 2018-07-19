@@ -1,0 +1,25 @@
+@include dinamicClass('#{$prefix}-row') {
+  margin-left: -($gutter/2);
+  margin-right: -($gutter/2);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@include dinamicMultiClass('#{$prefix}-row', '--centered') {
+  justify-content: space-around;
+}
+
+@include dinamicMultiClass('#{$prefix}-row', '--justify') {
+  justify-content: space-between;
+}
+
+@include dinamicMultiClass('#{$prefix}-row', '--no-gutter') {
+  margin-left: 0;
+  margin-right: 0;
+
+  & > [class^="#{$prefix}-col"],
+  & > [class*=" #{$prefix}-col"] {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
