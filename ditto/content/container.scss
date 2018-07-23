@@ -8,12 +8,12 @@
   padding-left: $gutter;
   padding-right: $gutter;
 
-  @include mq(mobile) {
+  @include ditto-mq(mobile) {
     padding-left: $gutter;
     padding-right: $gutter;
   }
 
-  @include mq(desktop) {
+  @include ditto-mq(desktop) {
     padding-left: $gutter;
     padding-right: $gutter;
   }

@@ -1,19 +1,19 @@
-@include dinamicClass('#{$prefix}-row') {
+@include ditto-dinamicClass('#{$prefix}-row') {
   margin-left: -($gutter/2);
   margin-right: -($gutter/2);
   display: flex;
   flex-wrap: wrap;
 }
 
-@include dinamicMultiClass('#{$prefix}-row', '--centered') {
+@include ditto-dinamicMultiClass('#{$prefix}-row', '--centered') {
   justify-content: space-around;
 }
 
-@include dinamicMultiClass('#{$prefix}-row', '--justify') {
+@include ditto-dinamicMultiClass('#{$prefix}-row', '--justify') {
   justify-content: space-between;
 }
 
-@include dinamicMultiClass('#{$prefix}-row', '--no-gutter') {
+@include ditto-dinamicMultiClass('#{$prefix}-row', '--no-gutter') {
   margin-left: 0;
   margin-right: 0;
 

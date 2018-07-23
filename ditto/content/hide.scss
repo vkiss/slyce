@@ -1,6 +1,6 @@
 @if $hide-class {
-  @each $mq, $size in ('mobile': 's', 'tablet': 'm', 'desktop': 'l', 'ultra': 'xl') {
-    @include mq($mq) {
+  @each $mq, $size in $breakpoint-options {
+    @include ditto-mq($mq) {
       .#{$prefix}-hide-#{$size} {
         display: none !important;
       }
