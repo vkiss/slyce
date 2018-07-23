@@ -33,4 +33,6 @@
   [class*=" #{$class}"][class*="#{$class2}"] {
     @content
   };
-};
+};};
+
+$breakpoint-options: ('mobile': $bp-mobile, 'tablet': $bp-tablet, 'desktop': $bp-desktop, 'ultra': $bp-ultra);

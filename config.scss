@@ -1,23 +1,30 @@
-$prefix: 'dt-';
+$prefix:                    'dt-';
 
-$noCol: 24;
+$noCol:                     24;
 
-$container-size:  1200px;
-$body-font-size:  16px;
-$gutter:          1rem;
+$container-size:            1200px;
+$body-font-size:            16px;
+$gutter:                    1rem;
 
 // trigger functions
-$hide-class: true; //If true, enable a hide class for every breakpoint.
-$vertical-offset-helper: true; //If true, enable helpers classes for vertical offset.
-$body-font-definition: true; // If true sets a font-size to body element.
+$hide-class:                true; //If true, enable a hide class for every breakpoint.
+$vertical-offset-helper:    true; //If true, enable helpers classes for vertical offset.
+$body-font-definition:      true; // If true sets a font-size to body element.
+$body-font-definition:      true; // If true sets a font-size to body element.
 
-// breakpoints
-$bp-ultra:      1800px;
-$bp-desktop:    1025px;
-$bp-tablet:     768px;
+// breakpoints sizes
+$bp-ultra:                  1800px;
+$bp-desktop:                1025px;
+$bp-tablet:                 768px;
+
+// breakpoints names
+$bp-mobile:                 's';
+$bp-tablet:                 'm';
+$bp-desktop:                'l';
+$bp-ultra:                  'xl';
 
 // vertical offset helpers sizes definition
-$vertical-offset-sizes : (8, 16, 32, 64, 128);
+$vertical-offset-sizes :    (8, 16, 32, 64, 128);
 
 
 // -- end config
