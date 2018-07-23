@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.1 - (in progress)
+### Refactor
+- Mixins titles with grid system prefix;
+
 ## 1.0.0 - 2018-07-19
 ### Added
 - Basic project configuration;

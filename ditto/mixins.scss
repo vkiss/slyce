@@ -1,4 +1,4 @@
-@mixin mq($device) {
+@mixin ditto-mq($device) {
   @if $device == 'ultra' {
     @media screen and (min-width: $bp-ultra) {
       @content
@@ -21,14 +21,14 @@
   };
 }
 
-@mixin dinamicClass($class) {
+@mixin ditto-dinamicClass($class) {
   [class^="#{$class}"],
   [class*=" #{$class}"] {
     @content
   };
 };
 
-@mixin dinamicMultiClass($class, $class2) {
+@mixin ditto-dinamicMultiClass($class, $class2) {
   [class^="#{$class}"][class*="#{$class2}"],
   [class*=" #{$class}"][class*="#{$class2}"] {
     @content
