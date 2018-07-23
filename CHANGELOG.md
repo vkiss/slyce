@@ -1,6 +1,10 @@
 # Changelog
 
-## 1.0.1 - (in progress)
+## 1.0.1 - 2018-07-23
+### Added
+- Option to define breakpoint class code;
+- Option to enable/disable Ultra breakpoint;
+
 ### Refactor
 - Mixins titles with grid system prefix;
 
