@@ -1,21 +1,21 @@
 @mixin ditto-mq($device) {
   @if $device == 'ultra' {
-    @media screen and (min-width: $bp-ultra) {
+    @media screen and (min-width: $bps-ultra) {
       @content
     }
   };
   @if $device == 'desktop' {
-    @media screen and (min-width: $bp-desktop) {
+    @media screen and (min-width: $bps-desktop) {
       @content
     }
   };
   @if $device == 'tablet' {
-    @media screen and (min-width: $bp-tablet) and (max-width: ($bp-desktop - 1)) {
+    @media screen and (min-width: $bps-tablet) and (max-width: ($bps-desktop - 1)) {
       @content
     }
   };
   @if $device == 'mobile' {
-    @media screen and (max-width: ($bp-tablet - 1)) {
+    @media screen and (max-width: ($bps-tablet - 1)) {
       @content
     }
   };
