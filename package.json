@@ -1,6 +1,6 @@
 {
   "name": "ditto-grid-system",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Customizable grid system that can be utilied in any project",
   "repository": {
     "type": "git",
@@ -21,7 +21,7 @@
   "scripts": {
     "sass": "node-sass --output-style nested --indent-type space --indent-width 2 -o build ditto/ditto.scss",
     "autoprefixer": "postcss -u autoprefixer -r build/*",
-    "concat": "concat -o build/ditto.scss config.scss ditto/mixins.scss ditto/content/body-config.scss ditto/content/row.scss ditto/content/col.scss ditto/content/col-offset.scss ditto/content/vertical-align.scss ditto/content/vertical-offset.scss ditto/content/hide.scss",
+    "concat": "concat -o build/ditto.scss config.scss ditto/mixins.scss ditto/content/body-config.scss ditto/content/container.scss ditto/content/row.scss ditto/content/col.scss ditto/content/col-offset.scss ditto/content/vertical-align.scss ditto/content/vertical-offset.scss ditto/content/hide.scss",
     "build": "rimraf build && npm run sass && npm run autoprefixer",
     "build:scss": "rimraf build && mkdir build && npm run concat"
   },

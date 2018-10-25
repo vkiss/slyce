@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.2 - 2018-10-25
+### Fix
+- Included 'container' class into build css and scss files;
+- Changed default prefix to 'dtt';
+
+
 ## 1.0.1 - 2018-07-23
 ### Added
 - Option to define breakpoint class code;
