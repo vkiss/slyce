@@ -1,24 +1,13 @@
-@mixin ditto-mq($device) {
-  @if $device == 'ultra' {
-    @media screen and (min-width: $bps-ultra) {
-      @content
-    }
-  };
-  @if $device == 'desktop' {
-    @media screen and (min-width: $bps-desktop) {
-      @content
-    }
-  };
-  @if $device == 'tablet' {
-    @media screen and (min-width: $bps-tablet) and (max-width: ($bps-desktop - 1)) {
-      @content
-    }
-  };
-  @if $device == 'mobile' {
-    @media screen and (max-width: ($bps-tablet - 1)) {
-      @content
-    }
-  };
+$media-types: (mobile: '(max-width: ' #{$bps-tablet - 1} ')',
+              tablet: '(min-width: ' #{$bps-tablet} ')',
+              tablet-only: '(min-width: ' #{$bps-tablet} ') and (max-width: ' #{$bps-desktop - 1} ')',
+              desktop: '(min-width: ' #{$bps-desktop} ')',
+              ultra: '(min-width: ' #{$bps-ultra} ')');
+
+@mixin ditto-mq($media) {
+  @media screen and #{map-get($media-types, $media)} {
+      @content;
+  }
 }
 
 @mixin ditto-dinamicClass($class) {
@@ -36,7 +25,9 @@
 };
 
 $breakpoint-options: ('mobile': $bp-mobile, 'tablet': $bp-tablet, 'desktop': $bp-desktop);
+$breakpoint-hide-options: ('mobile': $bp-mobile, 'tablet-only': $bp-tablet, 'desktop': $bp-desktop);
 
 @if $ultra-breakpoint {
   $breakpoint-options: ('mobile': $bp-mobile, 'tablet': $bp-tablet, 'desktop': $bp-desktop, 'ultra': $bp-ultra);
+  $breakpoint-hide-options: ('mobile': $bp-mobile, 'tablet-only': $bp-tablet, 'desktop': $bp-desktop, 'ultra': $bp-ultra);
 }

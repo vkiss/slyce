@@ -1,5 +1,5 @@
 @if $hide-class {
-  @each $mq, $size in $breakpoint-options {
+  @each $mq, $size in $breakpoint-hide-options {
     @include ditto-mq($mq) {
       .#{$prefix}-hide-#{$size} {
         display: none !important;
