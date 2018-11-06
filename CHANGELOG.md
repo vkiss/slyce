@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.0.3 - 2018-11-06
+### Fix
+- Not rendering media queries;
+- Col tablet resolution based only on min width;
+- Hide tablet class based on min and max width;
+
+### Refactor
+- Media query mixin refactor;
+
 ## 1.0.2 - 2018-10-25
 ### Fix
 - Included 'container' class into build css and scss files;
