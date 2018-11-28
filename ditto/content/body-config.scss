@@ -1,4 +1,5 @@
 @if $body-font-definition {
+  html,
   body {
     font-size: $body-font-size;
   }
