@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.4 - 2018-11-28
+### Fix
+- Adjust body size definition;
+
 ## 1.0.3 - 2018-11-06
 ### Fix
 - Not rendering media queries;
