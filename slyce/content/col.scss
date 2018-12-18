@@ -1,4 +1,4 @@
-@include ditto-dinamicClass('#{$prefix}-col') {
+@include slyce-dinamicClass('#{$prefix}-col') {
   padding-left: ($gutter/2);
   padding-right: ($gutter/2);
   min-height: 1px;
@@ -20,14 +20,14 @@
     [class^="#{$prefix}-col-#{$col}"],
     [class*=" #{$prefix}-col-#{$col}"] {
       $exp: $col*100/$noCol;
-      flex: 0 0 $exp + %;
-      max-width: $exp + %;
+      flex: 0 0 #{$exp}#{'%'};
+      max-width: #{$exp}#{'%'};
     }
     .#{$prefix}-offset-x-#{$col},
     [class^="#{$prefix}-col"][class*="--of-#{$col}"],
     [class*=" #{$prefix}-col"][class*="--of-#{$col}"] {
       $exp: $col*100/$noCol;
-      margin-left: $exp + %;
+      margin-left: #{$exp}#{'%'};
     }
 
     .#{$prefix}-order-#{$col},

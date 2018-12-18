@@ -6,15 +6,15 @@
         [class^="#{$prefix}-col"][class*="--#{$size}-#{$col}"],
         [class*=" #{$prefix}-col"][class*="--#{$size}-#{$col}"] {
           $exp: $col*100/$noCol;
-          flex: $exp + %;
-          max-width: $exp + %;
+          flex: #{$exp}#{'%'};
+          max-width: #{$exp}#{'%'};
         }
 
         .#{$prefix}-offset-x-#{$size}-#{$col},
         [class^="#{$prefix}-col"][class*="--of-#{$size}-#{$col}"],
         [class*=" #{$prefix}-col"][class*="--of-#{$size}-#{$col}"] {
           $exp: $col*100/$noCol;
-          margin-left: $exp + %;
+          margin-left: #{$exp}#{'%'};
         }
       }
       @else {

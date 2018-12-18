@@ -1,10 +1,10 @@
 {
-  "name": "ditto-grid-system",
-  "version": "1.0.4",
+  "name": "slyce-grid-system",
+  "version": "1.1.0",
   "description": "Customizable grid system that can be utilied in any project",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vkiss/ditto-grid-system.git"
+    "url": "git+https://github.com/vkiss/slyce.git"
   },
   "keywords": [
     "grid",
@@ -15,13 +15,13 @@
   "author": "Vinicius Kiss <contato@vkiss.com.br>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/vkiss/ditto-grid-system/issues"
+    "url": "https://github.com/vkiss/slyce/issues"
   },
-  "homepage": "https://github.com/vkiss/ditto-grid-system#readme",
+  "homepage": "https://github.com/vkiss/slyce#readme",
   "scripts": {
-    "sass": "node-sass --output-style nested --indent-type space --indent-width 2 -o build ditto/ditto.scss",
+    "sass": "node-sass --output-style nested --indent-type space --indent-width 2 -o build slyce/slyce.scss",
     "autoprefixer": "postcss -u autoprefixer -r build/*",
-    "concat": "concat -o build/ditto.scss config.scss ditto/mixins.scss ditto/content/body-config.scss ditto/content/container.scss ditto/content/row.scss ditto/content/col.scss ditto/content/col-offset.scss ditto/content/vertical-align.scss ditto/content/vertical-offset.scss ditto/content/hide.scss",
+    "concat": "concat -o build/slyce.scss config.scss slyce/mixins.scss slyce/content/body-config.scss slyce/content/container.scss slyce/content/row.scss slyce/content/col.scss slyce/content/col-offset.scss slyce/content/vertical-align.scss slyce/content/vertical-offset.scss slyce/content/hide.scss",
     "build": "rimraf build && npm run sass && npm run autoprefixer",
     "build:scss": "rimraf build && mkdir build && npm run concat"
   },
