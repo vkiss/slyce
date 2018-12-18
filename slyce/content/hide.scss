@@ -1,6 +1,6 @@
 @if $hide-class {
   @each $mq, $size in $breakpoint-hide-options {
-    @include ditto-mq($mq) {
+    @include slyce-mq($mq) {
       .#{$prefix}-hide-#{$size} {
         display: none !important;
       }

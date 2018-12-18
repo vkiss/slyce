@@ -1,4 +1,5 @@
-# ditto-grid-system
+# slyce
+### grid system
 
 ![GitHub release](https://img.shields.io/github/release/vkiss/ditto-grid-system.svg?colorA=dd8ec5&colorB=28292d&style=flat-square)
 ![Github commits (since latest release)](https://img.shields.io/github/commits-since/vkiss/ditto-grid-system/latest.svg?colorA=dd8ec5&colorB=28292d&style=flat-square)

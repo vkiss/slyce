@@ -4,20 +4,20 @@ $media-types: (mobile: '(max-width: ' #{$bps-tablet - 1} ')',
               desktop: '(min-width: ' #{$bps-desktop} ')',
               ultra: '(min-width: ' #{$bps-ultra} ')');
 
-@mixin ditto-mq($media) {
+@mixin slyce-mq($media) {
   @media screen and #{map-get($media-types, $media)} {
       @content;
   }
 }
 
-@mixin ditto-dinamicClass($class) {
+@mixin slyce-dinamicClass($class) {
   [class^="#{$class}"],
   [class*=" #{$class}"] {
     @content
   };
 };
 
-@mixin ditto-dinamicMultiClass($class, $class2) {
+@mixin slyce-dinamicMultiClass($class, $class2) {
   [class^="#{$class}"][class*="#{$class2}"],
   [class*=" #{$class}"][class*="#{$class2}"] {
     @content

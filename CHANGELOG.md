@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.1.0 - 2018-12-18
+- Renamed repository;
+
 ## 1.0.4 - 2018-11-28
 ### Fix
 - Adjust body size definition;
