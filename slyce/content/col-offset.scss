@@ -1,5 +1,5 @@
 @each $mq, $size in $breakpoint-options {
-  @include ditto-mq($mq) {
+  @include slyce-mq($mq) {
     @for $col from 0 through ($noCol) {
       @if $col > 0 {
         .#{$prefix}-col-#{$size}-#{$col},
