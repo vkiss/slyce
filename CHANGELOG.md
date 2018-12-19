@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.1 - 2018-12-19
+- Fixed crash that was happening when building;
+- Fixed some deviant sintaxes;
+
 ## 1.1.0 - 2018-12-18
 - Renamed repository;
 

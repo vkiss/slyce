@@ -1,11 +1,13 @@
-$media-types: (mobile: '(max-width: ' #{$bps-tablet - 1} ')',
-              tablet: '(min-width: ' #{$bps-tablet} ')',
-              tablet-only: '(min-width: ' #{$bps-tablet} ') and (max-width: ' #{$bps-desktop - 1} ')',
-              desktop: '(min-width: ' #{$bps-desktop} ')',
-              ultra: '(min-width: ' #{$bps-ultra} ')');
+$media-types: (
+  mobile: 'max-width: #{$bps-tablet - 1}',
+  tablet: 'min-width: #{$bps-tablet}',
+  tablet-only: 'min-width: #{$bps-tablet} ) and (max-width: #{$bps-desktop - 1}',
+  desktop: 'min-width: #{$bps-desktop}',
+  ultra: 'min-width: #{$bps-ultra}'
+);
 
 @mixin slyce-mq($media) {
-  @media screen and #{map-get($media-types, $media)} {
+  @media screen and (#{map-get($media-types, $media)}) {
       @content;
   }
 }
