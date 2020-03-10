@@ -1,0 +1,3 @@
+@include slyce-dinamicMultiClass('#{$prefix}-col', '--no-grow') {
+  flex-grow: inherit;
+}
